@@ -5,8 +5,9 @@ import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+@Table(name = "products")
 @Entity
-public class product {
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,9 +22,9 @@ public class product {
     @Column(nullable = false)
     private BigDecimal price;
 
-    @Column(length = 100, nullable = false)
+    @Column(nullable = false)
     private LocalDateTime published_data;
 
-    private user user;
+
 
 }
